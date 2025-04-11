@@ -1,0 +1,123 @@
+body {
+    font-family: 'Inter', sans-serif;
+    padding: 2rem;
+    background: linear-gradient(135deg, #dbeafe, #eef2ff);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    max-width: 600px;
+    background: white;
+    padding: 2rem;
+    border-radius: 2rem;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s ease-in-out;
+}
+
+h1 {
+    text-align: center;
+    color: #1e3a8a;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.subtitle {
+    text-align: center;
+    font-size: 0.95rem;
+    color: #475569;
+    margin-bottom: 1.5rem;
+}
+
+label {
+    display: block;
+    margin-top: 1rem;
+    font-weight: 600;
+    color: #1e40af;
+}
+
+input {
+    width: 100%;
+    padding: 0.6rem;
+    font-size: 1rem;
+    margin-top: 0.25rem;
+    border: 1px solid #c7d2fe;
+    border-radius: 0.5rem;
+    transition: border 0.2s ease;
+}
+
+input:focus {
+    outline: none;
+    border-color: #6366f1;
+}
+
+button {
+    margin-top: 2rem;
+    padding: 0.75rem;
+    width: 100%;
+    font-size: 1rem;
+    background-color: #4f46e5;
+    color: white;
+    font-weight: 600;
+    border: none;
+    border-radius: 0.75rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+button:hover {
+    background-color: #4338ca;
+}
+
+pre {
+    margin-top: 2rem;
+    background: #f3f4f6;
+    padding: 1rem;
+    border-radius: 0.75rem;
+    font-size: 0.95rem;
+    color: #111827;
+    word-break: break-word;
+}
+
+.info {
+    font-size: 0.9rem;
+    margin-top: 1.5rem;
+    color: #334155;
+    background: #e0e7ff;
+    padding: 1rem;
+    border-radius: 0.75rem;
+}
+
+.output-container {
+    position: relative;
+}
+
+#copyBtn {
+    display: none;
+    width: 70px;
+    position: absolute;
+    top: -18px;
+    right: 18px;
+    padding: 4px 8px;
+    cursor: pointer;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 0.9em;
+    transition: background-color 0.3s;
+}
+
+#copyBtn:hover {
+    background-color: #0056b3;
+}
+
+#copyBtn.copied {
+    background-color: #28a745;
+}
+
+#copyBtn.copied:hover {
+    background-color: #218838;
+}

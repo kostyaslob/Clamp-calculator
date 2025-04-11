@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Clamp Calculator</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/basiclightbox@5.0.4/dist/basicLightbox.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Clamp Calculator</h1>
+      <p class="subtitle">
+        Універсальний масштабатор для будь-яких CSS-властивостей
+      </p>
+
+      <label for="minWidth">📏 Мін. ширина viewport (px):</label>
+      <input type="number" id="minWidth" value="320" />
+
+      <label for="minValue">🔹 Мін. значення властивості (px):</label>
+      <input type="number" id="minValue" value="44" />
+
+      <label for="maxWidth">📏 Макс. ширина viewport (px):</label>
+      <input type="number" id="maxWidth" value="375" />
+
+      <label for="maxValue">🔸 Макс. значення властивості (px):</label>
+      <input type="number" id="maxValue" value="50" />
+
+      <button onclick="calculateClamp()">🔍 Розрахувати clamp()</button>
+
+      <div class="output-container">
+        <pre id="output">Результат з’явиться тут...</pre>
+        <button id="copyBtn" onclick="copyResult()">Copy</button>
+      </div>
+
+      <div class="info">
+        <strong>Що можна розраховувати?</strong><br />
+        Цей калькулятор підходить для будь-яких CSS-властивостей, які змінюються
+        залежно від ширини екрана:
+        <ul>
+          <li>📐 <code>font-size</code></li>
+          <li>📏 <code>width</code>, <code>height</code></li>
+          <li>🧱 <code>padding</code>, <code>margin</code></li>
+          <li>🔲 <code>gap</code>, <code>border-radius</code></li>
+          <li>
+            🎯 <code>translate</code>, <code>left</code>, <code>top</code> тощо
+          </li>
+        </ul>
+        Просто підстав потрібні значення та використай результат як
+        <code>clamp()</code> вираз у CSS.
+      </div>
+    </div>
+
+    <script src="./js/clamp-calc.js"></script>
+  </body>
+</html>
